@@ -18,6 +18,9 @@ app.use('/api', requireUser);
 app.use('/api/bikes', bikes);
 app.use('/api/transactions', transactions);
 
+// Unknown /api routes get JSON, so the app can show a clear message.
+app.use('/api', (_req, res) => res.status(404).json({ error: 'That API route doesn’t exist.' }));
+
 // Express 5 forwards async handler errors here.
 app.use((err, _req, res, _next) => {
   console.error(err);

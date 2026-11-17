@@ -29,6 +29,6 @@ export async function request(path, options = {}) {
   }
   if (res.status === 204) return null;
   const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(data.error || 'Something went wrong. Try again.');
+  if (!res.ok) throw new Error(data.error || `Something went wrong (error ${res.status}). Try again.`);
   return data;
 }
