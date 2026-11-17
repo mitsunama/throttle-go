@@ -1,0 +1,35 @@
+:root {
+  --ink: #101418;
+  --fog: #e8ecee;
+  --paper: #ffffff;
+  --amber: #f2a900;
+  --line: #c9d0d4;
+  --muted: #5b666e;
+  --pending: #b25e00;
+  --sold: #1f7a4d;
+  --danger: #b3261e;
+  --display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --body: 'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--body);
+  color: var(--ink);
+  background: var(--fog);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#root { display: flex; flex-direction: column; min-height: 100vh; }
+main { flex: 1; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.1; margin: 0 0 12px; }
+h1 { font-size: 2.4rem; font-weight: 800; }
+h2 { font-size: 1.7rem; font-weight: 800; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

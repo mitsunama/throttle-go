@@ -1,0 +1,7 @@
+node_modules
+dist
+db/schema.sql
+db/existing-database.sql
+.env
+.env.example
+.vercel
