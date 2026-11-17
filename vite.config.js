@@ -52,7 +52,7 @@ export default defineConfig({
             options: {
               cacheName: 'bike-photos',
               expiration: { maxEntries: 100, maxAgeSeconds: 30 * DAY },
-              cacheableResponseStatus: { statuses: [200] },
+              cacheableResponse: { statuses: [200] },
             },
           },
           {
@@ -64,7 +64,7 @@ export default defineConfig({
               cacheName: 'api-data',
               networkTimeoutSeconds: 4,
               expiration: { maxEntries: 60, maxAgeSeconds: 7 * DAY },
-              cacheableResponseStatus: { statuses: [200] },
+              cacheableResponse: { statuses: [200] },
             },
           },
           {
@@ -75,7 +75,7 @@ export default defineConfig({
             options: {
               cacheName: 'legacy-photos-v2',
               expiration: { maxEntries: 60, maxAgeSeconds: 7 * DAY },
-              cacheableResponseStatus: { statuses: [0, 200] },
+              cacheableResponse: { statuses: [0, 200] },
             },
           },
         ],
